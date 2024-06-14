@@ -9,11 +9,11 @@ body, html {
 }
 
 spline-viewer {
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 400px;
     z-index: 1;
 }
 
@@ -77,8 +77,72 @@ spline-viewer {
     color: white;
     text-align: center;
     padding: 50px;
-    margin-top: 50px; /* Adjusted for navbar height */
+    margin-top: 10px; /* Adjusted for navbar height */
 }
+
+h1 {
+    text-align: left;
+    font-size: 10vh;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vh;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 6vh;
+    }
+}
+
+.h1tag {
+    text-align: left;
+    font-size: 3vh;
+    margin-top: -30px;
+    color: #d7d7d7;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .h1tag {
+        font-size: 2.5vh;
+        margin-top: -25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1tag {
+        font-size: 2vh;
+        margin-top: -20px;
+    }
+}
+
+.button1 {
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.aboutmebutton {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 6px;
+}
+
+.aboutmebutton:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+
 
 .grid-container {
     display: grid;
