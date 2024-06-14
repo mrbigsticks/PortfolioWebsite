@@ -18,12 +18,13 @@ spline-viewer {
 }
 
 
-
+/* ADD THIS BLURRED COLOR BACKGROUND INTO OTHER PAGES OR OTHER SECTIONS OF WEBSITE WHEN NEEDED.
 .color {
     height: auto;
     width: auto;
     background-image: radial-gradient(closest-side, rgba(164, 167, 0, 0.488), black);
 }
+*/
 
 /* 
 .video-background {
