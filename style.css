@@ -193,7 +193,8 @@ h1 {
 .itemRight {
   width: 200px;
   height: 100px;
-  background-color: #e11d48;
+  background-color: #000000;
+  border: 2px solid white;
   border-radius: 6px;
   position: absolute;
   animation-timing-function: linear;
