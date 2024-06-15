@@ -41,7 +41,7 @@ spline-viewer {
 .navbar {
     position: fixed;
     top: 0;
-    height: 50px;
+    height: 80px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.546);
     backdrop-filter: blur(20px); /* Same blur effect as cards */
@@ -50,7 +50,7 @@ spline-viewer {
 
 .navbar ul {
     list-style-type: none;
-    margin: 2px;
+    margin: 20px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -62,14 +62,16 @@ spline-viewer {
 }
 
 .navbar ul li a {
-    color: white;
+    color: #d7d7d7;
     text-decoration: none;
     font-size: 18px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+    color: white;
 }
+
 
 .content {
     position: relative;
@@ -77,7 +79,6 @@ spline-viewer {
     color: white;
     text-align: center;
     padding: 50px;
-    margin-top: 10px; /* Adjusted for navbar height */
 }
 
 h1 {
@@ -251,7 +252,7 @@ h1 {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 70px;
 }
 
 .card {
