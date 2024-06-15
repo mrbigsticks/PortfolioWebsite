@@ -8,6 +8,11 @@ body, html {
     background: black;
 }
 
+::selection {
+    background-color: rgb(178, 0, 248); /* Highlight background color */
+    color: #000000;           /* Highlight text color */
+}
+
 spline-viewer {
     position: static;
     top: 0;
@@ -46,6 +51,7 @@ spline-viewer {
     background-color: rgba(0, 0, 0, 0.546);
     backdrop-filter: blur(20px); /* Same blur effect as cards */
     z-index: 2;
+    border-bottom: 2px solid #4d4d4d; /* Change color and thickness as needed */
 }
 
 .navbar ul {
@@ -84,6 +90,7 @@ spline-viewer {
 h1 {
     text-align: left;
     font-size: 10vh;
+    margin-top: -10px;
 }
 
 /* Adjust for smaller screens */
@@ -103,7 +110,7 @@ h1 {
     text-align: left;
     font-size: 3vh;
     margin-top: -30px;
-    color: #d7d7d7;
+    color: #a8a8a8;
 }
 
 /* Adjust for smaller screens */
@@ -256,12 +263,12 @@ h1 {
 }
 
 .card {
-    background-color: rgba(0, 0, 0, 0.546);
+    background-color: rgba(0, 6, 90, 0.281);
     border-radius: 10px;
+    border: 2px solid rgb(0, 174, 255);
     padding: 20px;
     text-align: left;
-    color: white;
-    backdrop-filter: blur(30px); /* Blur effect */
+    color: rgb(0, 174, 255);
     margin: 10px; /* Added margin to create space between cards */
 }
 
@@ -275,16 +282,17 @@ h1 {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #d7d7d7; /* Change to your desired color */
+    background-color: rgb(0, 174, 255); /* Change to your desired color */
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
     font-size: 18px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 }
 
 .button:hover {
-    background-color: #acacac; /* Change to your desired hover color */
+    background-color: rgb(0, 87, 128); /* Change to your desired hover color */
 }
 
 /* Responsive Nav Bar Styles */
