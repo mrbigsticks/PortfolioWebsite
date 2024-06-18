@@ -310,14 +310,16 @@ h1 {
     }
 }
 
-.epxerience {
+.experience {
     color: white;
     padding: 70px;
+    outline: 2px solid white;
+    margin-top: 30px;
 }
 
 
 .footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     text-align: center;
     padding: 20px 0;
