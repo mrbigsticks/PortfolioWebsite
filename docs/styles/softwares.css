@@ -1,0 +1,253 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: auto; /* Enable scrolling */
+    background: black;
+}
+
+::selection {
+    background-color: rgb(178, 0, 248); /* Highlight background color */
+    color: #000000;           /* Highlight text color */
+}
+
+
+/* ADD THIS BLURRED COLOR BACKGROUND INTO OTHER PAGES OR OTHER SECTIONS OF WEBSITE WHEN NEEDED.
+.color {
+    height: auto;
+    width: auto;
+    background-image: radial-gradient(closest-side, rgba(164, 167, 0, 0.488), black);
+}
+*/
+
+/* 
+.video-background {
+    position: fixed; /* Keep the video fixed in the background 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} 
+*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.546);
+    backdrop-filter: blur(20px); /* Same blur effect as cards */
+    z-index: 2;
+    border-bottom: 2px solid #4d4d4d; /* Change color and thickness as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.navbar ul li {
+    margin: 10px 20px;
+}
+
+.navbar ul li a {
+    color: #d7d7d7;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.navbar ul li a:hover {
+    color: white;
+}
+
+.color {
+    height: auto;
+    width: auto;
+    background-image: radial-gradient(closest-side, rgba(86, 0, 167, 0.421), black);
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 10vh;
+    margin-top: 150px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vh;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 6vh;
+    }
+}
+
+.h1tag {
+    text-align: left;
+    font-size: 3vh;
+    color: #a8a8a8;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .h1tag {
+        font-size: 2.5vh;
+        margin-top: -25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1tag {
+        font-size: 2vh;
+        margin-top: -20px;
+    }
+}
+
+.button1 {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.aboutmebutton {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+    border-radius: 6px;
+}
+
+.aboutmebutton:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width to make cards wider */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.card {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    margin: 10px; /* Added margin to create space between cards */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255); /* Change to your desired color */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.button:hover {
+    background-color: rgb(128, 128, 128); /* Change to your desired hover color */
+}
+
+/* Responsive Nav Bar Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        justify-content: space-around; /* Distribute space around items */
+    }
+
+    .navbar ul li {
+        margin: 10px 10px; /* Reduce margin for smaller screens */
+    }
+
+    .navbar ul li a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
