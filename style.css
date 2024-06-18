@@ -253,6 +253,62 @@ h1 {
 }
 
 
+.ReactIcon {
+    width: 100%;
+    height: 100%;
+    padding: 20px;;
+}
+
+.PythonIcon {
+    height: 100%;
+    padding: 20px;;
+}
+
+.GitHubIcon {
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+}
+
+.VercelIcon {
+    height: 100%;
+    width: 50%;
+    padding: 25px;
+}
+
+.VSCodeIcon {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+}
+
+.DiagramsIoIcon {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+}
+
+/*
+.CiscoPacketTracerIcon {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+}
+*/
+
+.AzureIcon {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+}
+
+.FigmaIcon {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width to make cards wider */
@@ -310,11 +366,19 @@ h1 {
     }
 }
 
+
+
 .experience {
     color: white;
     padding: 70px;
     outline: 2px solid white;
     margin-top: 30px;
+}
+
+.color {
+    width: auto;
+    height: auto;
+    background-image: radial-gradient(closest-side, rgba(0, 150, 167, 0.371), black);
 }
 
 
