@@ -414,6 +414,16 @@ h1 {
   text-align: center; /* Center text inside container */
 }
 
+.meP {
+  width: 90%; /* Adjust the percentage as per your design */
+  max-width: 1200px; /* You can also use max-width for responsive design */
+  margin: 0 auto; /* Center the paragraph horizontally */
+  margin-bottom: 50px;
+  color: #d7d7d7;
+  line-height: 2;
+  font-size: 18px;
+}
+
 .mebuttoncontact,
 .mebuttonresume {
   font-size: 20px;
@@ -426,7 +436,7 @@ h1 {
   border-radius: 5px;
   border: 0.5px solid rgba(26, 26, 26, 1);
   margin: 20px 20px; /* Adjusted margin */
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .mebuttoncontact {
