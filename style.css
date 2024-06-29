@@ -44,39 +44,52 @@ spline-viewer {
 */
 
 .navbar {
-    position: fixed;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.546);
-    backdrop-filter: blur(20px); /* Same blur effect as cards */
-    z-index: 2;
-    border-bottom: 2px solid #4d4d4d; /* Change color and thickness as needed */
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 80%; /* Default width for larger screens */
+  margin-top: 30px;
+  margin-left: 140px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.546);
+  backdrop-filter: blur(20px); /* Same blur effect as cards */
+  z-index: 2;
+  border: 0.5px solid #4d4d4d; /* Change color and thickness as needed */
 }
 
 .navbar ul {
-    list-style-type: none;
-    margin: 20px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
 
 .navbar ul li {
-    margin: 10px 20px;
+  margin: 10px 20px;
 }
 
 .navbar ul li a {
-    color: #d7d7d7;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+  color: #d7d7d7;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 }
 
 .navbar ul li a:hover {
-    color: white;
+  color: white;
+  /*padding: 4px 6px;
+  border: 0.5px solid #3D3D3D;*/
 }
+
+@media (max-width: 768px) {
+  .navbar {
+      width: 90%; /* Full width for smaller screens */
+      margin-left: 20px; /* Adjust margin or remove if not needed */
+  }
+}
+
 
 
 .content {
@@ -315,7 +328,7 @@ h1 {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 5rem;
 }
 
 .card {
@@ -380,6 +393,117 @@ h1 {
     height: auto;
     background-image: radial-gradient(closest-side, rgba(0, 150, 167, 0.497), black);
 }
+
+.mesection {
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  padding: 50px;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  color: white;
+  text-align: center; /* Center text inside container */
+}
+
+.mebuttoncontact,
+.mebuttonresume {
+  font-size: 20px;
+  flex-direction: row;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 0.5px solid rgba(26, 26, 26, 1);
+  margin: 20px 5px; /* Adjusted margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mesection {
+      padding: 20px; /* Adjust padding for smaller screens */
+  }
+  .mebuttoncontact,
+  .mebuttonresume {
+      font-size: 14px; /* Adjust font size for smaller screens */
+      margin: 10px 5px; /* Adjusted margin for smaller screens */
+  }
+}
+
+
+
+
+/* ADD THIS IMAGE PART TO THE FINAL PRODUCT IN UPCOMING UPDATES.
+#meimage {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 100px;
+}*/
+
+
+.color-table {
+    width: auto;
+    height: auto;
+    background-image: radial-gradient(closest-side, rgba(86, 0, 167, 0.421), black);
+}
+  
+  .card-grid-tablecontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+
+  .color-table {
+    width: auto;
+    height: auto;
+    background-image: radial-gradient(closest-side, rgba(0, 25, 167, 0.497), black);
+}
+  
+  .tablecards {
+    margin: 10px;
+    padding: 20px;
+    border: 0.5px solid #3D3D3D;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.5s ease;
+    width: calc(100% / 9); /* set the initial width to a percentage of the grid */
+  }
+
+  #tablecard1 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    border: 1px solid white;
+    box-shadow:0px 6px 30px rgb(9, 190, 0), inset 0px 6px 70px rgb(9, 190, 0);
+  }
+  
+  /* ADD LATER OR ADD TO DIFFERENT SECTIONS.
+  .tablecards:hover {
+    box-shadow: 0px 6px 30px rgb(33, 191, 186);
+  }
+  */
+  
+  @media (max-width: 600px) {
+    .tablecards {
+      width: calc(100% / 4); /* adjust the width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .tablecards {
+      width: calc(100% / 2); /* adjust the width for even smaller screens */
+    }
+  }
 
 
 .footer {

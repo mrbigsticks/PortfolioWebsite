@@ -48,36 +48,48 @@ spline-viewer {
     position: fixed;
     top: 0;
     height: 80px;
-    width: 100%;
+    width: 80%; /* Default width for larger screens */
+    margin-top: 30px;
+    margin-left: 140px;
+    border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.546);
     backdrop-filter: blur(20px); /* Same blur effect as cards */
     z-index: 2;
-    border-bottom: 2px solid #4d4d4d; /* Change color and thickness as needed */
-}
-
-.navbar ul {
+    border: 0.5px solid #4d4d4d; /* Change color and thickness as needed */
+  }
+  
+  .navbar ul {
     list-style-type: none;
     margin: 20px;
     padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Allow wrapping for responsiveness */
-}
-
-.navbar ul li {
+  }
+  
+  .navbar ul li {
     margin: 10px 20px;
-}
-
-.navbar ul li a {
+  }
+  
+  .navbar ul li a {
     color: #d7d7d7;
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-}
-
-.navbar ul li a:hover {
+  }
+  
+  .navbar ul li a:hover {
     color: white;
-}
+    /*padding: 4px 6px;
+    border: 0.5px solid #3D3D3D;*/
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+        width: 90%; /* Full width for smaller screens */
+        margin-left: 20px; /* Adjust margin or remove if not needed */
+    }
+  }
 
 .color {
     height: auto;
