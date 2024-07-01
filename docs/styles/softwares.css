@@ -10,7 +10,7 @@ body, html {
 
 ::selection {
     background-color: rgb(178, 0, 248); /* Highlight background color */
-    color: #000000;           /* Highlight text color */
+    color: #000000;          /* Highlight text color */
 }
 
 
