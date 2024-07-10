@@ -50,7 +50,7 @@ spline-viewer {
     height: 80px;
     width: 80%; /* Default width for larger screens */
     margin-top: 30px;
-    margin-left: 140px;
+    margin-left: 155px;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.546);
     backdrop-filter: blur(20px); /* Same blur effect as cards */
@@ -90,6 +90,7 @@ spline-viewer {
         margin-left: 20px; /* Adjust margin or remove if not needed */
     }
   }
+  
 
 .color {
     height: auto;

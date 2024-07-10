@@ -396,6 +396,7 @@ h1 {
 
 .mesection {
   flex-direction: column;
+  margin: 50px;
   margin-top: 10rem;
   margin-bottom: 10rem;
   padding: 50px;
@@ -404,10 +405,15 @@ h1 {
   align-items: center; /* Center items vertically */
   color: white;
   text-align: center; /* Center text inside container */
+  border: 0.5px solid #3D3D3D;
+  border-radius: 4px;
 }
+
+
 
 .Name {
   position: relative;
+  margin-top: 10px;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
   color: white;
@@ -437,6 +443,7 @@ h1 {
   border: 0.5px solid rgba(26, 26, 26, 1);
   margin: 20px 20px; /* Adjusted margin */
   margin-top: 5rem;
+  margin-bottom: 20px;
 }
 
 .mebuttoncontact {
