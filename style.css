@@ -22,6 +22,9 @@ spline-viewer {
     z-index: 1;
 }
 
+a {
+  color: #0085FF;
+}
 
 /* ADD THIS BLURRED COLOR BACKGROUND INTO OTHER PAGES OR OTHER SECTIONS OF WEBSITE WHEN NEEDED.
 .color {
@@ -498,7 +501,7 @@ h1 {
 }
   
   .tablecards {
-    margin: 10px;
+    margin: 15px;
     padding: 20px;
     border: 0.5px solid #3D3D3D;
     border-radius: 6px;
