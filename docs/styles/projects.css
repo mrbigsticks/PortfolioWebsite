@@ -116,8 +116,8 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust card width as needed */
     gap: 40px; /* Gap between cards */
     padding: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 120px;
+    margin-right: 120px;
     justify-items: center;
     justify-content: center;
   }
@@ -130,6 +130,8 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.5s ease;
     background-color: #000000;
+    width: 360px;
+    height: auto;
   }
 
   /* Styling for the image */
