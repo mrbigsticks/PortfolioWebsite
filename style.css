@@ -57,7 +57,7 @@ a {
   background-color: rgba(0, 0, 0, 0.546);
   backdrop-filter: blur(20px); /* Same blur effect as cards */
   z-index: 2;
-  border: 0.5px solid #4d4d4d; /* Change color and thickness as needed */
+  border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
 }
 
 .navbar ul {

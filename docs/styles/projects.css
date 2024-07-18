@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    overflow: auto; /* Enable scrolling */
+    background-image: url(/docs/images/ProjectsBackgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    color: white;
+}
+
+::selection {
+    background-color: rgb(178, 0, 248); /* Highlight background color */
+    color: #000000;          /* Highlight text color */
+}
+
+
+/* ADD THIS BLURRED COLOR BACKGROUND INTO OTHER PAGES OR OTHER SECTIONS OF WEBSITE WHEN NEEDED.
+.color {
+    height: auto;
+    width: auto;
+    background-image: radial-gradient(closest-side, rgba(164, 167, 0, 0.488), black);
+}
+*/
+
+/* 
+.video-background {
+    position: fixed; /* Keep the video fixed in the background 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} 
+*/
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 80%; /* Default width for larger screens */
+    margin-top: 30px;
+    margin-left: 155px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.546);
+    backdrop-filter: blur(20px); /* Same blur effect as cards */
+    z-index: 2;
+    border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  }
+  
+  .navbar ul li {
+    margin: 10px 20px;
+  }
+  
+  .navbar ul li a {
+    color: #4d4d4d;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+  }
+  
+  .navbar ul li a:hover {
+    color: white;
+    /*padding: 4px 6px;
+    border: 0.5px solid #3D3D3D;*/
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+        width: 90%; /* Full width for smaller screens */
+        margin-left: 20px; /* Adjust margin or remove if not needed */
+    }
+  }
+
+/* Responsive Nav Bar Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        justify-content: space-around; /* Distribute space around items */
+    }
+
+    .navbar ul li {
+        margin: 10px 10px; /* Reduce margin for smaller screens */
+    }
+
+    .navbar ul li a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+h1 {
+    margin-top: 14ch;
+    padding: 40px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust card width as needed */
+    gap: 40px; /* Gap between cards */
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  /* Basic styling for the card */
+  .card {
+    border: 1px solid #3D3D3D;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+    background-color: #000000;
+  }
+
+  /* Styling for the image */
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Styling for the description */
+  .card .description {
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    margin-top: -30px;
+  }
+
+  /* Styling for the date */
+  .card .date {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 20px;
+  }
+
+
+
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
