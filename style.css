@@ -520,6 +520,20 @@ h1 {
     border: 1px solid white;
     box-shadow:0px 6px 30px rgb(9, 190, 0), inset 0px 6px 70px rgb(9, 190, 0);
   }
+
+  #tablecard1:hover {
+    color: rgb(9, 190, 0);
+  }
+
+  .linux {
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+  }
+
+  .linux:hover {
+    color: rgb(6, 122, 0);
+  }
   
   /* ADD LATER OR ADD TO DIFFERENT SECTIONS.
   .tablecards:hover {
