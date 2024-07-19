@@ -48,9 +48,9 @@ spline-viewer {
     position: fixed;
     top: 0;
     height: 80px;
-    width: 80%; /* Default width for larger screens */
+    width: 50%; /* Default width for larger screens */
     margin-top: 30px;
-    margin-left: 155px;
+    margin-left: 350px;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.546);
     backdrop-filter: blur(20px); /* Same blur effect as cards */

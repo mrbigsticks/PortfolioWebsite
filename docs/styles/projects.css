@@ -42,18 +42,18 @@ body, html {
 
 
 .navbar {
-    position: fixed;
-    top: 0;
-    height: 80px;
-    width: 80%; /* Default width for larger screens */
-    margin-top: 30px;
-    margin-left: 155px;
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.546);
-    backdrop-filter: blur(20px); /* Same blur effect as cards */
-    z-index: 2;
-    border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
-  }
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 50%; /* Default width for larger screens */
+  margin-top: 30px;
+  margin-left: 350px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.546);
+  backdrop-filter: blur(20px); /* Same blur effect as cards */
+  z-index: 2;
+  border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
+}
   
   .navbar ul {
     list-style-type: none;
