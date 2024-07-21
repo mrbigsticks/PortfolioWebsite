@@ -592,12 +592,18 @@ h1 {
 }
 
 .email-section input[type="email"] {
-    width: 70%;
+    width: 100px;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+/* EMAIL INPUT ACTIVE STYLING FOR FUTURE UPDATE
+.email-section:active{
+  border: none;
+}
+*/
 
 .email-section button {
     padding: 8px 16px;
@@ -632,8 +638,8 @@ h1 {
 }
 
 input {
-  background-color: #3D3D3D;
-  border: 1px solid black;
+  background-color: #ffffff;
+  border: 2px solid #3D3D3D;
 }
 
 .contact-info-section p {
