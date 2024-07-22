@@ -1,59 +1,33 @@
-body, html {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
-    overflow: auto; /* Enable scrolling */
-    background-image: url(/docs/images/ProjectsBackgroundImage.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
 }
 
 ::selection {
     background-color: rgb(178, 0, 248); /* Highlight background color */
-    color: #000000;          /* Highlight text color */
+    color: #000000;           /* Highlight text color */
 }
-
-
-/* ADD THIS BLURRED COLOR BACKGROUND INTO OTHER PAGES OR OTHER SECTIONS OF WEBSITE WHEN NEEDED.
-.color {
-    height: auto;
-    width: auto;
-    background-image: radial-gradient(closest-side, rgba(164, 167, 0, 0.488), black);
-}
-*/
-
-/* 
-.video-background {
-    position: fixed; /* Keep the video fixed in the background 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-} 
-*/
 
 
 .navbar {
-  position: fixed;
-  top: 0;
-  height: 80px;
-  width: 50%; /* Default width for larger screens */
-  margin-top: 30px;
-  margin-left: 350px;
-  border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.546);
-  backdrop-filter: blur(20px); /* Same blur effect as cards */
-  z-index: 2;
-  border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
-}
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 50%; /* Default width for larger screens */
+    margin-top: 30px;
+    margin-left: 350px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.546);
+    backdrop-filter: blur(20px); /* Same blur effect as cards */
+    z-index: 2;
+    border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
+  }
   
   .navbar ul {
     list-style-type: none;
@@ -87,8 +61,9 @@ body, html {
         margin-left: 20px; /* Adjust margin or remove if not needed */
     }
   }
+  
 
-/* Responsive Nav Bar Styles */
+  /* Responsive Nav Bar Styles */
 @media (max-width: 768px) {
     .navbar ul {
         justify-content: space-around; /* Distribute space around items */
@@ -102,65 +77,74 @@ body, html {
         font-size: 16px; /* Adjust font size for smaller screens */
     }
 }
+  
 
 
 
 
-h1 {
-    margin-top: 14ch;
-    padding: 40px;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    width: 100%;
+    margin: 120px auto;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust card width as needed */
-    gap: 40px; /* Gap between cards */
-    padding: 20px;
-    margin-left: 120px;
-    margin-right: 120px;
-    margin-bottom: 240px;
-    justify-items: center;
+.text-side {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-  }
+    align-items: flex-start;
+    padding: 160px;
+}
 
-  /* Basic styling for the card */
-  .card {
-    border: 1px solid #3D3D3D;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.5s ease;
-    background-color: #000000;
-    width: 360px;
-    height: auto;
-  }
+h1 {
+    font-size: 48px;
+}
 
-  /* Styling for the image */
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+p {
+    font-size: 16px;
+}
 
-  /* Styling for the description */
-  .card .description {
+.image-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background-color: rgb(0, 0, 0);
-    margin-top: -30px;
-  }
+}
 
-  /* Styling for the date */
-  .card .date {
-    text-align: center;
-    color: #888;
-    font-style: italic;
-    font-size: 0.9em;
-    margin-top: 20px;
-  }
+.image-side img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .text-side, .image-side {
+        padding: 20px;
+    }
+
+    .image-side img {
+        width: 90%;
+    }
+}
 
 
 
-  .site-footer {
+
+
+
+
+.site-footer {
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 20px;
