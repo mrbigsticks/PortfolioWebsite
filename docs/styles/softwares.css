@@ -179,8 +179,8 @@ h1 {
 
 .card {
     background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    border: 1px solid rgb(255, 255, 255);
     padding: 20px;
     text-align: left;
     color: rgb(255, 255, 255);
@@ -211,6 +211,49 @@ h1 {
 .button:hover {
     background-color: rgb(128, 128, 128); /* Change to your desired hover color */
 }
+
+
+
+
+
+.ThreatIntelligencecard {
+    background-color: rgba(0, 6, 90, 0.281);
+    border-radius: 12px;
+    border: 1px solid rgb(0, 174, 255);
+    padding: 20px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    margin: 10px; /* Added margin to create space between cards */
+}
+
+.ThreatIntelligencecard img {
+    width:100%;
+    height: auto;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: -30px;
+    margin-top: -30px;
+}
+
+.TIbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 174, 255); /* Change to your desired color */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.TIbutton:hover {
+    background-color: rgb(0, 87, 128); /* Change to your desired hover color */
+}
+
+
+
+
 
 /* Responsive Nav Bar Styles */
 @media (max-width: 768px) {
