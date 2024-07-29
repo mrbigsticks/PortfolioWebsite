@@ -166,16 +166,32 @@ h1 {
   box-sizing: border-box;
 }
 
+.header-image {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image is responsive */
+    width: 1000px; /* Set width to 1000px on larger screens */
+    height: auto;
+    border-radius: 12px; /* Optional: Add border-radius if desired */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    cursor: pointer;
+}
 
+@media (max-width: 1000px) {
+    .header-image {
+        width: 100%; /* Make image responsive below 1000px width */
+    }
+}
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width to make cards wider */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     max-width: 1000px;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 20px; /* Adjust margin-top to create space below the image */
 }
+
 
 .card {
     background-color: rgb(0, 0, 0);
