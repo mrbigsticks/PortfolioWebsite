@@ -68,7 +68,7 @@ aside {
 }
 
 .sidebar img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px; /* Optional: Add border radius */
     margin-bottom: 20px; /* Spacing below the image */
