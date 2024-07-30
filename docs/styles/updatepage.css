@@ -33,7 +33,7 @@ main {
 }
 
 .homebutton {
-    border: 1px solid white;
+    border: 0.5px solid #3D3D3D;
     border-radius: 6px;
     padding: 12px;
     width: 140px;
@@ -46,6 +46,7 @@ main {
     margin-bottom: 20px;
     margin-left: 20px;
 }
+
 
 article {
     margin-bottom: 20px;

@@ -6,7 +6,11 @@ body, html {
     font-family: Arial, sans-serif;
     overflow: auto; /* Enable scrolling */
     background: black;
+    scroll-behavior: smooth;
 }
+
+
+
 
 ::selection {
     background-color: rgb(178, 0, 248); /* Highlight background color */
@@ -158,6 +162,7 @@ h1 {
     cursor: pointer;
     transition: background-color 0.4s, color 0.4s, border-color 0.4s;
     border-radius: 6px;
+    margin-top: 10px;
 }
 
 .aboutmebutton:hover {
@@ -408,8 +413,7 @@ h1 {
   align-items: center; /* Center items vertically */
   color: white;
   text-align: center; /* Center text inside container */
-  border: 0.5px solid #3D3D3D;
-  border-radius: 4px;
+
 }
 
 
@@ -424,13 +428,14 @@ h1 {
 }
 
 .meP {
-  width: 90%; /* Adjust the percentage as per your design */
+  width: 100%; /* Adjust the percentage as per your design */
   max-width: 1200px; /* You can also use max-width for responsive design */
   margin: 0 auto; /* Center the paragraph horizontally */
   margin-bottom: 50px;
   color: #d7d7d7;
   line-height: 2;
   font-size: 18px;
+  text-align: left;
 }
 
 .mebuttoncontact,
@@ -483,7 +488,6 @@ h1 {
 .color-table {
     width: auto;
     height: auto;
-    background-image: radial-gradient(closest-side, rgba(86, 0, 167, 0.421), black);
 }
   
   .card-grid-tablecontent {
@@ -497,7 +501,7 @@ h1 {
   .color-table {
     width: auto;
     height: auto;
-    background-image: radial-gradient(closest-side, rgba(0, 25, 167, 0.497), black);
+    background-image: radial-gradient(closest-side, rgba(0, 161, 167, 0.434), black);
 }
   
   .tablecards {
