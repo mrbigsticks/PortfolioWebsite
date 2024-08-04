@@ -485,77 +485,74 @@ h1 {
 }*/
 
 
+  
+.card-grid-tablecontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
 .color-table {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
+  background-image: radial-gradient(closest-side, rgba(0, 100, 167, 0.434), black);
 }
-  
-  .card-grid-tablecontent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-  }
 
-  .color-table {
-    width: auto;
-    height: auto;
-    background-image: radial-gradient(closest-side, rgba(0, 161, 167, 0.434), black);
+.tablecards {
+  margin: 15px;
+  padding: 20px;
+  border: 0.5px solid #3D3D3D;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.5s ease;
+  width: calc(100% / 4); /* set the initial width to a percentage of the grid */
 }
-  
+
+#tablecard1 {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  border: 1px solid white;
+  box-shadow: 0px 6px 30px rgb(9, 190, 0), inset 0px 6px 70px rgb(9, 190, 0);
+}
+
+#tablecard1:hover {
+  color: rgb(9, 190, 0);
+}
+
+.linux {
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.linux:hover {
+  color: rgb(6, 122, 0);
+}
+
+/* ADD LATER OR ADD TO DIFFERENT SECTIONS.
+.tablecards:hover {
+  box-shadow: 0px 6px 30px rgb(33, 191, 186);
+}
+*/
+
+@media (max-width: 600px) {
   .tablecards {
-    margin: 15px;
-    padding: 20px;
-    border: 0.5px solid #3D3D3D;
-    border-radius: 6px;
-    background-color: black;
-    color: white;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
-    transition: all 0.5s ease;
-    width: calc(100% / 9); /* set the initial width to a percentage of the grid */
+      width: calc(100% / 2); /* adjust the width for smaller screens */
   }
+}
 
-  #tablecard1 {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center;
-    border: 1px solid white;
-    box-shadow:0px 6px 30px rgb(9, 190, 0), inset 0px 6px 70px rgb(9, 190, 0);
+@media (max-width: 400px) {
+  .tablecards {
+      width: 100%; /* adjust the width for even smaller screens */
   }
+}
 
-  #tablecard1:hover {
-    color: rgb(9, 190, 0);
-  }
-
-  .linux {
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-  }
-
-  .linux:hover {
-    color: rgb(6, 122, 0);
-  }
-  
-  /* ADD LATER OR ADD TO DIFFERENT SECTIONS.
-  .tablecards:hover {
-    box-shadow: 0px 6px 30px rgb(33, 191, 186);
-  }
-  */
-  
-  @media (max-width: 600px) {
-    .tablecards {
-      width: calc(100% / 4); /* adjust the width for smaller screens */
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .tablecards {
-      width: calc(100% / 2); /* adjust the width for even smaller screens */
-    }
-  }
 
 
   .site-footer {
