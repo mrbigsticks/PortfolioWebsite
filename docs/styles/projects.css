@@ -15,7 +15,7 @@ body, html {
 }
 
 ::selection {
-    background-color: rgb(178, 0, 248); /* Highlight background color */
+    background-color: rgb(255, 255, 255); /* Highlight background color */
     color: #000000;          /* Highlight text color */
 }
 
@@ -40,69 +40,52 @@ body, html {
 } 
 */
 
-
 .navbar {
   position: fixed;
   top: 0;
   height: 80px;
   width: 50%; /* Default width for larger screens */
   margin-top: 30px;
-  margin-left: 350px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.546);
-  backdrop-filter: blur(20px); /* Same blur effect as cards */
+  backdrop-filter: blur(20px);
   z-index: 2;
-  border: 0.5px solid #3D3D3D; /* Change color and thickness as needed */
+  border: 0.5px solid #3D3D3D;
 }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 20px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-  }
-  
-  .navbar ul li {
-    margin: 10px 20px;
-  }
-  
-  .navbar ul li a {
-    color: #4d4d4d;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-  }
-  
-  .navbar ul li a:hover {
-    color: white;
-    /*padding: 4px 6px;
-    border: 0.5px solid #3D3D3D;*/
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-        width: 90%; /* Full width for smaller screens */
-        margin-left: 20px; /* Adjust margin or remove if not needed */
-    }
-  }
 
-/* Responsive Nav Bar Styles */
+.navbar ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin: 10px 20px;
+}
+
+.navbar ul li a {
+  color: #4d4d4d;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.navbar ul li a:hover {
+  color: white;
+}
+
 @media (max-width: 768px) {
-    .navbar ul {
-        justify-content: space-around; /* Distribute space around items */
-    }
-
-    .navbar ul li {
-        margin: 10px 10px; /* Reduce margin for smaller screens */
-    }
-
-    .navbar ul li a {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
+  .navbar {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
-
 
 
 
