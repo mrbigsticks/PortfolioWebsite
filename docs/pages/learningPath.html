@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Coding Journey</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 50%; /* Default width for larger screens */
+  margin-top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.546);
+  backdrop-filter: blur(20px);
+  z-index: 2;
+  border: 0.5px solid #3D3D3D;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin: 10px 20px;
+}
+
+.navbar ul li a {
+  color: #4d4d4d;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.navbar ul li a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 10ch;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-content {
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        .card-footer button {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .not-started {
+            background-color: #4b5563;
+        }
+
+        .in-progress {
+            background-color: #fbbf24;
+        }
+
+        .completed {
+            background-color: #10b981;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/docs/pages/projects.html">Projects</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <!--<li><a href="#/">EXTRA WEBSITE</a></li>-->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Your Coding Journey</h1>
+        <div class="grid" id="learningPath">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </div>
+    <script>
+        const learningPath = [
+            {
+                id: 'html',
+                title: 'HTML',
+                icon: 'hash',
+                description: 'Learn the structure of web pages',
+                status: 'completed'
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: 'codepen',
+                description: 'Style your web pages',
+                status: 'completed'
+            },
+            {
+                id: 'javascript',
+                title: 'JavaScript',
+                icon: 'file-json',
+                description: 'Add interactivity to your websites',
+                status: 'in-progress'
+            },
+            {
+                id: 'typescript',
+                title: 'TypeScript',
+                icon: 'braces',
+                description: 'Enhance JavaScript with static typing',
+                status: 'not-started'
+            },
+            {
+                id: 'react',
+                title: 'React',
+                icon: 'atom',
+                description: 'Build user interfaces with components',
+                status: 'not-started'
+            },
+            {
+                id: 'nextjs',
+                title: 'Next.js',
+                icon: 'atom',
+                description: 'Create full-stack React applications',
+                status: 'not-started'
+            },
+            {
+                id: 'databases',
+                title: 'Databases',
+                icon: 'database',
+                description: 'Learn about data storage and retrieval',
+                status: 'not-started'
+            },
+            {
+                id: 'fullstack',
+                title: 'Full Stack',
+                icon: 'database',
+                description: 'Combine front-end and back-end skills',
+                status: 'not-started'
+            }
+        ];
+
+        function createCard(step) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-header">
+                    <div class="card-icon ${step.status}">
+                        <i data-lucide="${step.icon}"></i>
+                    </div>
+                    <span class="card-title">${step.title}</span>
+                </div>
+                <div class="card-content">${step.description}</div>
+                <div class="card-footer">
+                    <button class="${step.status}">${getButtonText(step.status)}</button>
+                </div>
+            `;
+
+            const button = card.querySelector('button');
+            button.addEventListener('click', () => toggleProgress(step.id));
+
+            return card;
+        }
+
+        function getButtonText(status) {
+            switch (status) {
+                case 'completed': return 'Completed';
+                case 'in-progress': return 'In Progress';
+                default: return 'Start';
+            }
+        }
+
+        function toggleProgress(id) {
+            const step = learningPath.find(step => step.id === id);
+            switch (step.status) {
+                case 'not-started':
+                    step.status = 'in-progress';
+                    break;
+                case 'in-progress':
+                    step.status = 'completed';
+                    break;
+                case 'completed':
+                    step.status = 'not-started';
+                    break;
+            }
+            renderLearningPath();
+        }
+
+        function renderLearningPath() {
+            const container = document.getElementById('learningPath');
+            container.innerHTML = '';
+            learningPath.forEach(step => {
+                container.appendChild(createCard(step));
+            });
+            lucide.createIcons();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderLearningPath);
+    </script>
+</body>
+</html>
