@@ -640,31 +640,4 @@ h1 {
 }
 
 .footerPages {
-  margin-left: 30px;
-}
-
-
-.pages-section ul {
-    list-style-type: none;
-    padding: 0px;
-    margin-left: 30px;
-}
-
-.pages-section ul li {
-    margin-bottom: 5px;
-}
-
-.pages-section ul li a {
-    color: #3D3D3D;
-    text-decoration: none;
-}
-
-input {
-  background-color: #ffffff;
-  border: 2px solid #3D3D3D;
-}
-
-.contact-info-section p {
-    font-size: 14px;
-    line-height: 1.6;
-}
+  margin-left: 

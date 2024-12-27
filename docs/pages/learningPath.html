@@ -14,8 +14,7 @@
             padding: 0;
         }
 
-       
-.navbar {
+        .navbar {
   position: fixed;
   top: 0;
   height: 80px;
@@ -62,17 +61,16 @@
   }
 }
 
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            margin-top: 10ch;
             padding: 2rem;
         }
 
-        h1 {
+        h1, h2 {
             text-align: center;
             margin-bottom: 2rem;
+            margin-top: 8ch;
         }
 
         .grid {
@@ -134,6 +132,51 @@
         .completed {
             background-color: #10b981;
         }
+
+        .projects {
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background-color: #000000;
+            border: 1px solid #374151;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            background-color: #4b5563;
+            border-radius: 0.25rem;
+            height: 0.5rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background-color: #10b981;
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .project-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+
+        .project-actions button {
+            padding: 0.25rem 0.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -151,6 +194,12 @@
         <h1>Your Coding Journey</h1>
         <div class="grid" id="learningPath">
             <!-- Cards will be dynamically inserted here -->
+        </div>
+        <div class="projects">
+            <h2>Your Projects</h2>
+            <div id="projectsContainer">
+                <!-- Project cards will be dynamically inserted here -->
+            </div>
         </div>
     </div>
     <script>
@@ -220,6 +269,29 @@
             }
         ];
 
+        const projects = [
+            {
+                id: 'basic-website',
+                title: 'Basic Website',
+                progress: 0
+            },
+            {
+                id: 'react-web-app',
+                title: 'React Web App',
+                progress: 0
+            },
+            {
+                id: 'nextjs-website',
+                title: 'Next.js Website',
+                progress: 0
+            },
+            {
+                id: 'cybersecurity-software',
+                title: 'Cybersecurity Software',
+                progress: 0
+            }
+        ];
+
         function createCard(step) {
             const card = document.createElement('div');
             card.className = 'card';
@@ -275,7 +347,41 @@
             lucide.createIcons();
         }
 
-        document.addEventListener('DOMContentLoaded', renderLearningPath);
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.innerHTML = `
+                <div class="project-title">${project.title}</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${project.progress}%"></div>
+                </div>
+                <div class="project-actions">
+                    <button onclick="updateProjectProgress('${project.id}', -10)">-10%</button>
+                    <span>${project.progress}%</span>
+                    <button onclick="updateProjectProgress('${project.id}', 10)">+10%</button>
+                </div>
+            `;
+            return card;
+        }
+
+        function updateProjectProgress(id, change) {
+            const project = projects.find(p => p.id === id);
+            project.progress = Math.max(0, Math.min(100, project.progress + change));
+            renderProjects();
+        }
+
+        function renderProjects() {
+            const container = document.getElementById('projectsContainer');
+            container.innerHTML = '';
+            projects.forEach(project => {
+                container.appendChild(createProjectCard(project));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderLearningPath();
+            renderProjects();
+        });
     </script>
 </body>
 </html>
